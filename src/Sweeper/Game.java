@@ -1,0 +1,22 @@
+package Sweeper;
+
+public class Game {
+
+    private Bomb bomb;
+
+    public Game (int cols, int rows, int bombs)
+    {
+        Ranges.setSize(new Coordinat(cols, rows));
+        bomb = new Bomb(bombs);
+    }
+
+    public void start ()
+    {
+        bomb.start();
+    }
+
+    public Box getBox (Coordinat coordinat)
+    {
+        return bomb.get(coordinat);
+    }
+}
